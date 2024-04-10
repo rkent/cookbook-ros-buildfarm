@@ -30,7 +30,9 @@ suites:
     attributes:
       ros_buildfarm:
         smtp: true
-
+    driver:
+      network: 
+      - ["public_network", {bridged: "en01"}]
     run_list:
       - recipe[ros_buildfarm::jenkins]
     verifier:
